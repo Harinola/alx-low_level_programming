@@ -14,7 +14,7 @@ int main(void)
 	float _flt;
 
 	printf("Size of a char: %d byte(s)\n", (int)sizeof(_char));
-	printf("Size of a int: %d byte(s)\n", (int)sizeof(_int));
+	printf("Size of an int: %d byte(s)\n", (int)sizeof(_int));
 	printf("Size of a long int: %d byte(s)\n", (int)sizeof(lng_int));
 	printf("Size of a long long int: %d byte(s)\n", (int)sizeof(lng_lng_int));
 	printf("Size of a float: %d byte(s)\n", (int)sizeof(_flt));
