@@ -8,11 +8,11 @@
 int main(void)
 {
 	int i;
-       unsigned long a = 1, b = 0;
+	long double a = 1, b = 0;
 
 	for (i = 0; i < 98; i++)
 	{
-	unsigned long nxt_num = a + b;
+	long double nxt_num = a + b;
 
 		b = a;
 		a = nxt_num;
@@ -20,7 +20,7 @@ int main(void)
 		if (i > 0)
 			printf(", ");
 
-		printf("%lu", nxt_num);
+		printf("%.0Lf", nxt_num);
 
 	}
 
