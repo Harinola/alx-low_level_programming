@@ -18,6 +18,7 @@ void jack_bauer(void)
 	for (m1 = 0; m1 < 10; m1++)
 	{
 		int r = h * 10 + h1;
+
 		if (r > 23)
 			break;
 

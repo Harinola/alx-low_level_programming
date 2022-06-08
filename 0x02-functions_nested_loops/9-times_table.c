@@ -32,7 +32,7 @@ void times_table(void)
 
 		if (mul < 10)
 		{
-		_putchar(mul +'0');
+		_putchar(mul + '0');
 		}
 		else
 		{
