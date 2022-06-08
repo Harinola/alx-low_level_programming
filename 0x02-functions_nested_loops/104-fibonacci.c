@@ -10,7 +10,7 @@ int main(void)
 	int i;
        unsigned long a = 1, b = 0;
 
-	for (i = 0; i < 50; i++)
+	for (i = 0; i < 98; i++)
 	{
 	unsigned long nxt_num = a + b;
 

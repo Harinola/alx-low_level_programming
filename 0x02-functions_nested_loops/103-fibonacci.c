@@ -16,9 +16,9 @@ int main(void)
 		b = a;
 		a = nxt_num;
 
-		if (nxt_num <= 4000000)
+		if (nxt_num <= 4000000 && nxt_num % 2 == 0)
 			sum += nxt_num;
-		else
+		else if (nxt_num > 4000000)
 			break;
 	}
 
