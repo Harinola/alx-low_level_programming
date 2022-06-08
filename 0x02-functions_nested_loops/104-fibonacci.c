@@ -8,6 +8,7 @@
 int main(void)
 {
 	int i;
+
 	long double a = 1, b = 0;
 
 	for (i = 0; i < 98; i++)
