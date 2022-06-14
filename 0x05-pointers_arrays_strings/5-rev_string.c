@@ -21,7 +21,7 @@ void rev_string(char *s)
 		}
 	}
 
-	char str[count];
+	char str[1000000];
 	int k;
 
 	for (k = 0; k < count; k++)
