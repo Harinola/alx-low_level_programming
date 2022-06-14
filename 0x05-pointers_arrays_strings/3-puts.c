@@ -5,7 +5,7 @@
  *
  * Return: void.
  */
-int _puts(char *str)
+void _puts(char *str)
 {
 	int i;
 
@@ -17,7 +17,9 @@ int _puts(char *str)
 		}
 		else
 		{
-			_putchar('*(str + i)');
+			char a = *(str + 1);
+
+			_putchar(a);
 		}
 	}
 
