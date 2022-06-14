@@ -17,10 +17,11 @@ void _puts(char *str)
 		}
 		else
 		{
-			char a = *(str + 1);
+			char a = *(str + i);
 
 			_putchar(a);
 		}
 	}
-
+	
+	_putchar('\n');
 }
