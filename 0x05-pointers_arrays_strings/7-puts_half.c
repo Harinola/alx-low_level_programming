@@ -22,7 +22,7 @@ void puts_half(char *str)
 			count++;
 		}
 	}
-	if (count % 2 == 0)
+	if (count % 2 == 1)
 	{
 		count++;
 	}
