@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * _strcpy  - a function that copies a string unto another string variable.
  * @dest: pointer to the destination of the copied string.
@@ -9,18 +10,21 @@
 char *_strcpy(char *dest, char *src)
 {
 	int i;
-	char a;
+
+	if (dest == NULL)
+		return (NULL);
 
 	for (i = 0; ; i++)
 	{
-		if (*src == '\0')
+		if (*(src + i) == '\0')
 		{
-			*(dest + i) = *src;
 			break;
 		}
 
 		*(dest + i) = *(src + i);
 	}
 
-	return (&a);
+	*(dest + i) = '\0';
+
+	return (dest);
 }
