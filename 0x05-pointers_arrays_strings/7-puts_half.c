@@ -25,12 +25,22 @@ void puts_half(char *str)
 	if (count % 2 == 1)
 	{
 		count++;
-	}
-	for (j = count / 2; j < count; j++)
-	{
-		char a = *(str + j);
 
-		_putchar(a);
+		for (j = count / 2; j < count - 1; j++)
+		{
+			char a = *(str + j);
+
+			_putchar(a);
+		}
+	}
+	else
+	{
+		for (j = count / 2; j < count; j++)
+		{
+			char a = *(str + j);
+
+			_putchar(a);
+		}
 	}
 	_putchar('\n');
 }
