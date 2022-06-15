@@ -9,6 +9,7 @@
 char *_strcpy(char *dest, char *src)
 {
 	int i;
+	char a;
 
 	for (i = 0; ; i++)
 	{
@@ -21,5 +22,5 @@ char *_strcpy(char *dest, char *src)
 		*(dest + i) = *(src + i);
 	}
 
-	return (&i);
+	return (&a);
 }
