@@ -6,8 +6,10 @@
  *
  * Return: pointer to dest.
  */
-char *_strcat(char *dest, char *src) 
+char *_strcat(char *dest, char *src)
 {
+	char *a = dest;
+
 	while (*dest != '\0')
 	{
 		dest++;
@@ -22,5 +24,5 @@ char *_strcat(char *dest, char *src)
 
 	*dest = '\0';
 
-	return (dest);
+	return (a);
 }
