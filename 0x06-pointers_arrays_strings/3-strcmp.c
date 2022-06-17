@@ -15,7 +15,7 @@ int _strcmp(char *s1, char *s2)
 	{
 		if (*s2 == '\0')
 		{
-			res = 15;
+			res = -15;
 			break;
 		}
 		if (*s1 != *s2)
@@ -27,9 +27,9 @@ int _strcmp(char *s1, char *s2)
 	}
 
 	if (*s1 == *s2 && i > 0)
-		res = 15;
-	else if (*s1 != *s2 && i > 0)
 		res = -15;
+	else if (*s1 != *s2 && i > 0)
+		res = 15;
 
 	return (res);
 }
