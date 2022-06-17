@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * _strncpy - copy the content of one string to another string.
  * @dest: the destination string.
@@ -18,9 +19,16 @@ char *_strncpy(char *dest, char *src, int n)
 		src++;
 		n--;
 	}
+	printf("n: %d\n", n);
 	if (*src == '\0')
 	{
 		*dest = '\0';
+		while (n > 0)
+		{
+			*dest = '\0';
+			dest++;
+			n--;
+		}
 	}
 
 	return (a);
