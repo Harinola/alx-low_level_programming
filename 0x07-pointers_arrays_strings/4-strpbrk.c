@@ -27,6 +27,8 @@ char *_strpbrk(char *s, char *accept)
 				break;
 			}
 		}
+		if (a != NULL)
+			break;
 
 		s++;
 	}
