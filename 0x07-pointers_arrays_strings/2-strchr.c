@@ -19,13 +19,13 @@ char *_strchr(char *s, char c)
 		}
 		s++;
 	}
-/**
- * testing for the null chracter
- */
+
+/*testing for the null chracter*/
+
 	if (*s == c)
 	{
 		a = s;
 	}
-	
+
 	return (a);
 }
