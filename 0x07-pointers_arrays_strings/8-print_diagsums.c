@@ -18,7 +18,7 @@ void print_diagsums(int *a, int size)
 			{
 				rsum += *(*(a + i) + j);
 			}
-			if ( i + j == size - 1)
+			if (i + j == size - 1)
 			{
 				lsum += *(*(a + i) + j);
 			}
