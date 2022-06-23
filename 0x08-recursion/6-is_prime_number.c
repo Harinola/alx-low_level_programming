@@ -12,5 +12,22 @@ int is_prime_number(int n)
 		return (0);
 	}
 
-	return ( + is_prime_number(n - 1));
+	return (prime_number(n, 2));
+}
+
+/**
+ * prime_number - Determines if a number is prime or not.
+ * @n: The number to be checked if prime or not.
+ * @p: The divisor.
+ *
+ * Return: 1 if n is prime, and 0 if not
+ */
+int prime_number(int n, int p)
+{
+	if (n % p == 0 && p < n)
+		return (0);
+	if (p > n / 2)
+		return (1);
+
+	return (prime_number(n, p + 1));
 }
