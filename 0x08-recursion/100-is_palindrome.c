@@ -1,4 +1,6 @@
 #include "main.h"
+int palindrome(char *s, int i, int len);
+int _strlen_recursion(char *s);
 /**
  * is_palindrome - confirms if a string is palindrome.
  * @s: the given string.
