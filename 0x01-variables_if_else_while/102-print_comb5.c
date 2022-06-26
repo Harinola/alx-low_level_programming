@@ -7,11 +7,11 @@
  */
 int main(void)
 {
-	int i, j, k, l, c;
+	int i, j, k, l;
 
 	for (i = 0; i < 10; i++)
 	{
-		for (j = 0; j < 9; j++)
+		for (j = 0; j < 10; j++)
 		{
 			for (k = i; k < 10; k++)
 			{
@@ -25,7 +25,7 @@ int main(void)
 
 				putchar(k + '0');
 				putchar(l + '0');
-				if (i + j < 17)
+				if ((i * 10) + j < 98)
 				{
 					putchar(',');
 					putchar(32);
