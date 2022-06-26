@@ -7,7 +7,7 @@
  */
 void print_number(int n)
 {
-	int count, num, i;
+	int count, num, i, k;
 
 	count = 0;
 	num = n;
@@ -26,7 +26,9 @@ void print_number(int n)
 	}
 	for (i = count; i > 0; i--)
 	{
-		_putchar((n %= 10) + '0');
+		k = n % 10;
+		n /= 10;
+		_putchar((k) + '0');
 	}
 
 	_putchar('\n');
