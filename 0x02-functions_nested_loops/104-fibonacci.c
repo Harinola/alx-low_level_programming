@@ -8,7 +8,7 @@
 int main(void)
 {
 	unsigned long int i, a, a1, a2, b, b1, b2, nxt_num, nxt_num2;
-	
+
 	a = 1;
 	b = 0;
 
@@ -28,7 +28,7 @@ int main(void)
 	b1 = b / 10000000000;
 	a2 = a % 10000000000;
 	b2 = b % 10000000000;
-	
+
 	for (i = 92; i < 98; i++)
 	{
 		nxt_num = a1 + b1;
