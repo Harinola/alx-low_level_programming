@@ -7,29 +7,46 @@
  */
 void print_number(int n)
 {
-	int count, num, i, k;
+	int count, num, i, indx, k, plc_hld;
 
 	count = 0;
-	num = n;
-
-	while (num > 0)
+	plc_hld = 1;
+	
+	if (n == 0)
 	{
-		count++;
-
-		num /= 10;
+		_putchar('0');
 	}
-	if (n < 0)
+	else
 	{
-		n = -n;
+		if (n < 0)
+		{
+			n = -n;
+			_putchar('-');
+		}
+		num = n;
+		while (num > 0)
+		{
+			count++;
+			num /= 10;
+		}
 
-		_putchar('-');
-	}
-	for (i = count; i > 0; i--)
-	{
-		k = n % 10;
-		n /= 10;
-		_putchar((k) + '0');
+		for (i = count; i > 0; i--)
+		{
+			indx = i - 1;
+			if (indx > 0)
+			{
+				while (indx-- > 0)
+				{
+					plc_hld *= 10;
+				}
+				k = (n / plc_hld) % 10;
+			}
+			else
+			{
+				k = n % 10;
+			}
+			_putchar((k) + '0');
+		}
 	}
 
-	_putchar('\n');
 }
