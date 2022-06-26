@@ -7,9 +7,12 @@
  */
 int main(void)
 {
-	unsigned long int i, a = 1, b = 0, nxt_num;
+	unsigned long int i, a, a1, b, b1, nxt_num, nxt_num2;
+	
+	a = 1;
+	b = 0;
 
-	for (i = 0; i < 98; i++)
+	for (i = 0; i < 92; i++)
 	{
 	nxt_num = a + b;
 
@@ -20,7 +23,24 @@ int main(void)
 			printf(", ");
 
 		printf("%lu", nxt_num);
+	}
+	a1 = a / 10000000000;
+	b1 = b / 10000000000;
+	a2 = a % 10000000000;
+	b2 = b % 10000000000;
+	
+	for (i = 92; i < 98; i++)
+	{
+		nxt_num = a1 + b1;
+		nxt_num2 = a2 + b2;
 
+		b1 = a1;
+		a1 = nxt_num;
+		b2 = a2;
+		a2 = nxt_num2;
+
+		printf(", %lu", nxt_num + (nxt_num2 / 10000000000));
+		printf("%lu", nxt_num2 % 10000000000);
 	}
 
 	printf("\n");
