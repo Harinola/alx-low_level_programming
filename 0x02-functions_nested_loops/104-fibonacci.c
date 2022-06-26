@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	unsigned long int i, a, a1, b, b1, nxt_num, nxt_num2;
+	unsigned long int i, a, a1, a2, b, b1, b2, nxt_num, nxt_num2;
 	
 	a = 1;
 	b = 0;
