@@ -2,7 +2,7 @@
 #include <unistd.h>
 #include "main.h"
 /**
- * crete_array - creates an arrays of type char and initializes it
+ * create_array - creates an arrays of type char and initializes it
  * with a constant char.
  * @size: size of the array.
  * @c: constant char.
@@ -17,7 +17,7 @@ char *create_array(unsigned int size, char c)
 	if (size == 0)
 		return (NULL);
 
-	arr = (char *)malloc(sizeof(char) * size + 1);
+	arr = (char *)malloc(sizeof(char) * size);
 	if (arr == NULL)
 		return (NULL);
 
