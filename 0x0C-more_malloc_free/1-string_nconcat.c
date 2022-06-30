@@ -23,6 +23,7 @@ unsigned int _strlen(char *s)
  * string_nconcat - Concatenates n bytes of s2 unto s1 in a new memory.
  * @s1: First string.
  * @s2: Second string.
+ * @n: Number of bytes.
  *
  * Return: Address of the new memory(Success), NULL(Failure).
  */
@@ -43,7 +44,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 
 	while (i < _strlen(s1))
-		s[i++] = s1[i];
+	{
+		s[i] = s1[i];
+		i++;
+	}
 
 	while (j < len)
 		s[i++] = s2[j++];
