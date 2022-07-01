@@ -53,11 +53,9 @@ void _error(void)
  */
 int main(int argc, char **argv)
 {
-	char *s1, *s2;
+	char *s1 = argv[1], *s2 = argv[2];
 	int *ans, len1, len2, lent, dgt1, dgt2, rem, i, j, check = 0;
 
-	s1 = argv[1];
-	s2 = argv[2];
 	if (argc != 3 || !(is_digit(s1)) || !(is_digit(s2)))
 		_error();
 	len1 = _strlen(s1);
@@ -89,6 +87,7 @@ int main(int argc, char **argv)
 		if (check)
 			_putchar(ans[i] + '0');
 	}
+	free(ans);
 	if (!check)
 		_putchar('0');
 	_putchar('\n');
