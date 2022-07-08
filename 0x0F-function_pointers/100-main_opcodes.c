@@ -4,7 +4,7 @@
 /**
  * main - Prints the opcodes of the main function(itself).
  * @argc: Count of arguments passed.
- * @argv/; array of arguments passed.
+ * @argv: array of arguments passed.
  *
  * Return: Always 0(Success).
  */
