@@ -7,7 +7,7 @@
  *  doesn't points back into a previous node of the list.
  *  Return: number of (safe) nodes in the list.
  */
-size_t print_listint_safe(listint_t *head)
+size_t print_listint_safe(const listint_t *head)
 {
 	size_t node = 0;
 	long int diff;
