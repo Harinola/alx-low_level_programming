@@ -24,7 +24,7 @@ void copy_from_to(const char *file_from, const char *file_to)
 	{
 		if (fd_w < 0 || write(fd_w, buf, r) != r)
 		{
-		dprintf(2, "Error: can't write from file %s\n", file_to);
+		dprintf(2, "Error: can't write to %s\n", file_to);
 		close(fd_r);
 		exit(99);
 		}
