@@ -24,14 +24,14 @@ void copy_from_to(const char *file_from, const char *file_to)
 	{
 		if (fd_w < 0 || write(fd_w, buf, r) != r)
 		{
-		dprintf(2, "Error: can't write to %s\n", file_to);
+		dprintf(2, "Error: Can't write to %s\n", file_to);
 		close(fd_r);
 		exit(99);
 		}
 	}
 	if (r < 0)
 	{
-		dprintf(2, "Error: can't read from file %s\n", file_from);
+		dprintf(2, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
 	c_r = close(fd_r);
@@ -39,12 +39,12 @@ void copy_from_to(const char *file_from, const char *file_to)
 
 	if (c_r < 0)
 	{
-		dprintf(2, "Error: can't close fd %i\n", c_r);
+		dprintf(2, "Error: Can't close fd %i\n", c_r);
 		exit(100);
 	}
 	if (c_w < 0)
 	{
-		dprintf(2, "Error: can't close fd %i\n", c_w);
+		dprintf(2, "Error: Can't close fd %i\n", c_w);
 		exit(100);
 	}
 }
