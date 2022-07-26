@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * write_from_to - writes from onr file to another.
+ * copy_from_to - writes from onr file to another.
  * @file_from: file to read from.
  * @file_to: file to write to.
  *
@@ -16,38 +16,36 @@ void copy_from_to(const char *file_from, const char *file_to)
 	if (fd_r < 0)
 	{
 		dprintf(2, "Error: can't read from file %s\n", file_from);
-		exit (98);
+		exit(98);
 	}
 
-	fd_w = creat(file_to, 0664);
-
+	fd_w = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	while ((r = read(fd_r, buf, BUFSIZ)) > 0)
 	{
 		if (fd_w < 0 || write(fd_w, buf, r) != r)
 		{
 		dprintf(2, "Error: can't write from file %s\n", file_to);
 		close(fd_r);
-		exit (99);
+		exit(99);
 		}
 	}
 	if (r < 0)
 	{
 		dprintf(2, "Error: can't read from file %s\n", file_from);
-		exit (98);
+		exit(98);
 	}
-
 	c_r = close(fd_r);
 	c_w = close(fd_w);
 
 	if (c_r < 0)
 	{
 		dprintf(2, "Error: can't close fd %i\n", c_r);
-		exit (100);
+		exit(100);
 	}
 	if (c_w < 0)
 	{
 		dprintf(2, "Error: can't close fd %i\n", c_w);
-		exit (100);
+		exit(100);
 	}
 }
 /**
@@ -62,7 +60,7 @@ int main(int ac, char *av[])
 	if (ac != 3)
 	{
 		dprintf(2, "Usage: cp file_from file_to\n");
-		exit (97);
+		exit(97);
 	}
 
 	copy_from_to(av[1], av[2]);
