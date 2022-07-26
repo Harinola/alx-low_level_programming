@@ -1,4 +1,6 @@
 #include "main.h"
+
+#define S_E STDERR_FILENO
 /**
  * copy_from_to - writes from onr file to another.
  * @file_from: file to read from.
@@ -15,7 +17,7 @@ void copy_from_to(const char *file_from, const char *file_to)
 	fd_r = open(file_from, O_RDONLY);
 	if (fd_r < 0)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", file_from);
+		dprintf(S_E, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
 
@@ -24,14 +26,14 @@ void copy_from_to(const char *file_from, const char *file_to)
 	{
 		if (fd_w < 0 || write(fd_w, buf, r) != r)
 		{
-		dprintf(2, "Error: Can't write to %s\n", file_to);
+		dprintf(S_E, "Error: Can't write to %s\n", file_to);
 		close(fd_r);
 		exit(99);
 		}
 	}
 	if (r < 0)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", file_from);
+		dprintf(S_E, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
 	c_r = close(fd_r);
@@ -39,12 +41,12 @@ void copy_from_to(const char *file_from, const char *file_to)
 
 	if (c_r < 0)
 	{
-		dprintf(2, "Error: Can't close fd %i\n", c_r);
+		dprintf(S_E, "Error: Can't close fd %i\n", c_r);
 		exit(100);
 	}
 	if (c_w < 0)
 	{
-		dprintf(2, "Error: Can't close fd %i\n", c_w);
+		dprintf(S_E, "Error: Can't close fd %i\n", c_w);
 		exit(100);
 	}
 }
@@ -59,7 +61,7 @@ int main(int ac, char *av[])
 {
 	if (ac != 3)
 	{
-		dprintf(2, "Usage: cp file_from file_to\n");
+		dprintf(S_E, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
