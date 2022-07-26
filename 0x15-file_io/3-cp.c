@@ -15,7 +15,7 @@ void copy_from_to(const char *file_from, const char *file_to)
 	fd_r = open(file_from, O_RDONLY);
 	if (fd_r < 0)
 	{
-		dprintf(2, "Error: can't read from file %s\n", file_from);
+		dprintf(2, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
 
